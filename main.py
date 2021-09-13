@@ -12,35 +12,20 @@ users = web.UserStore()
 today = date.today()
 strdate = str(today) #Converts input from amount to string to print it below.
 
+@app.route('/ref=producthunt')
+def producthunt():
+  return redirect(url_for("home.html"))
+
 @app.route('/')
 def index():
-   return '''
-   <link href="static/style.css" rel="stylesheet" type="text/css" />
-   <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet'>
-   <h3><i>Make invoices fast</i></h3><span class="black-highlight"><code> /invoice/&lt;company>/&lt;from1>/&lt;toemail>/&lt;to>/&lt;paymentmethod>/&lt;item1>/&lt;price1>/&lt;item2>/&lt;price2>/&lt;item3>/&lt;price3>/&lt;item4>/&lt;price4>/</code></span>
-
-  <div class="makeitneg">
-   <br>
-   <br>
-   </div>
-   <a href="https://invoiceee.itsdharmik.repl.co/invoice/i%20lend/me/his%20email/him/hand%20to%20hand/some%20money/1000/some%20more%20money/1500/some%20more%20more%20money/2000/my%20wallet/90000/" target="_blank"><span class="text1">See how a invoice looks.</a></span>
-  <div class="makeitneg">
-   <br>
-   <br>
-   </div>
-   <div class=text1>
-   Steps to make a invoice.
-   <ol>
-  <li><span class="makeitneg">Paste this in search bar :</span> <span class="black-highlight"><code>
-  https://invoice.itsdharmik.repl.co/invoice/&lt;company>/&lt;from1>/&lt;toemail>/&lt;to>/&lt;paymentmethod>/&lt;item1>/&lt;price1>/&lt;item2>/&lt;price2>/&lt;item3>/&lt;price3>/&lt;item4>/&lt;price4>/</code></span></li>
-  <li>Replace the values in the fields with your preferred values.</li>
-  <li>NOTE:- If you only want to create an invoice for a single or two or three item, delete all the fields ahead of time and put "/" at the end.</li>
-  </ol>  
-  </div>
-   <!--Make a list and write all steps. Should be less than 4 or 5-->
-   '''
-   
+   return flask.render_template("home.html")
 #from1 is still not used
+
+@app.route("/instructions")
+def instructions():
+  return flask.render_template("instructions.html")
+
+
 
 #Main index that shows how receipt looks without adding the value. No integer present
 @app.route('/invoice/<company>/<from1>/<toemail>/<to>/<paymentmethod>/<item1>/<price1>/<item2>/<price2>/<item3>/<price3>/<item4>/<price4>/<item5>/<price5>/')

@@ -22,3 +22,10 @@
   text-decoration: none;
 }
 
+.producthunt {
+  text-align: center;
+  font-family: monospace;
+  position: relative;
+  top: 240px;
+
+}
