@@ -1,5 +1,5 @@
 *{
-  
+
 }
 
 .black-highlight {
@@ -16,5 +16,9 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; 
+}
+
+.text1 {
+  text-decoration: none;
 }
 
