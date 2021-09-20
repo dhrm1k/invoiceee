@@ -19,7 +19,6 @@ def producthunt():
 @app.route('/')
 def index():
    return flask.render_template("home.html")
-#from1 is still not used
 
 @app.route("/instructions")
 def instructions():
