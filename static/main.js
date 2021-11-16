@@ -4,7 +4,6 @@
  * to unleash some lightning.
  *
  * All rights and trademarks for "Pikachu" belong to Nintendo, Inc.
- */
 (function(window){
 
   "use strict";
@@ -344,3 +343,5 @@
     init(data);
 
 })(window);
+
+ */
